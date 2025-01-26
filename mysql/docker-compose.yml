@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword   # Contraseña de root
+      MYSQL_USER: user                    # Usuario personalizado
+      MYSQL_PASSWORD: userpassword        # Contraseña del usuario
+    ports:
+      - "3306:3306" # Exponer el puerto para acceder a MySQL
+    volumes:
+      - ./db_data:/var/lib/mysql           # Persistencia de datos
+      - ./pueblosmalaga.sql:/docker-entrypoint-initdb.d/pueblosmalaga.sql:ro
+      - ./mysql-logs:/var/log/mysql        # Volumen de logs, asegurando que se persisten
