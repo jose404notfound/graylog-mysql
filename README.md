@@ -3,6 +3,7 @@
 
 Este proyecto tiene como objetivo enviar los logs de **MySQL** a **Graylog** desde diferentes contenedores o máquinas, proporcionando una solución centralizada de monitoreo y análisis de los logs de MySQL.
 
+En este caso he utilizado una base de datos, podéis adaptar el ejemplo a vuestras necesidades usando otra diferente o creándola.
 ## Contenido del Repositorio
 
 Este repositorio se encuentra dividido en dos directorios principales:
